@@ -52,7 +52,7 @@ const questions = {
         },
         {
             type: 'input',
-            name: 'officeNum',
+            name: 'officeNumber',
             message: "What is the manager's office number?",
             validate: numInput => {
                 if (numInput) {
@@ -271,3 +271,6 @@ function addNewEmployee() {
             };
         });
 };
+
+addNewEmployee();
+

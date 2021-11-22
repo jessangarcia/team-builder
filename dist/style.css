@@ -1,0 +1,44 @@
+.jumbotron {
+    background-color: #000000;
+    font-family: 'Times New Roman', Times, serif;
+    color: rgb(30, 91, 94);
+    text-decoration: underline;
+    opacity: 0.9;
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #2a7b8f;
+  }
+
+body {
+    background-image: url(https://bigsee.eu/wp-content/uploads/2020/08/Untitled-1-19.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000000;
+
+}
+
+
+.card-header {
+    background-color: #2a7b8f;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.card-body {
+    background-color: #888888;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+}
+
+
+.list-group-item {
+    background-color: #d8d6d6;
+}
+
+.name {
+    text-decoration: underline;
+}
