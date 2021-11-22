@@ -6,6 +6,12 @@ const emailValidator = require('email-validator')
 const fs = require('fs');
 const path = require('path');
 
+const DIST_DIR = path.resolve(__dirname, 'dist');
+const distPath = path.join(DIST_DIR, 'create.html');
+
+const render = require('./lib/render');        
+const Employee = require('./lib/Employee');
+
 const team = [];
 let setTeam = true;
 
@@ -136,7 +142,7 @@ const questions = {
         {
             type: 'input',
             name: 'name',
-            message: "What is the inter's name?",
+            message: "What is the intern's name?",
             validate: nameInput => {
                 if (nameInput) {
                     return true
@@ -233,7 +239,7 @@ function addNewEmployee() {
                 }
 
 
-            } else if (answer.employeeType === 'Engineer') {
+            } else if (answer.roleType === 'Engineer') {
                 inquirer.prompt(questions.Engineer)
                     .then(answer => {
                         const engineer = new Engineer
@@ -251,7 +257,7 @@ function addNewEmployee() {
                         };
                     });
 
-            } else if (answer.employeeType === 'Intern') {
+            } else if (answer.roleType === 'Intern') {
                 inquirer.prompt(questions.Intern)
                     .then(answer => {
                         const intern = new Intern
@@ -274,3 +280,7 @@ function addNewEmployee() {
 
 addNewEmployee();
 
+function generate() {
+    fs.writeFileSync(distPath, render(team), "utf-8");
+    process.exit(0);
+}
