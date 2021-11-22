@@ -1,0 +1,30 @@
+{
+  "name": "team-builder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jessangarcia/team-builder.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jessangarcia/team-builder/issues"
+  },
+  "homepage": "https://github.com/jessangarcia/team-builder#readme",
+  "devDependencies": {
+    "jest": "^27.0.6"
+  },
+  "dependencies": {
+    "email-validator": "^2.0.4",
+    "inquirer": "^8.1.2",
+    "inquirer-file-path": "^1.0.1",
+    "inquirer-path": "^1.0.0-beta5",
+    "path": "^0.12.7"
+  }
+}
